@@ -71,8 +71,8 @@ export default {
       ],
     }
   },
-  computed: {
-  },
+  // computed: {
+  // },  //我命由我，不由天。
 
   methods: {
     gernerateId: function (index) {
