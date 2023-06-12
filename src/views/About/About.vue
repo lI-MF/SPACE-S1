@@ -29,12 +29,6 @@
         </div>
       </div>
 
-      <!-- <div class="about-btn">
-        <div class="about-btn-item"></div>
-        <div class="about-btn-item"></div>
-        <div class="about-btn-item"></div>
-      </div> -->
-
       <!--  -->
     </div>
   </div>
