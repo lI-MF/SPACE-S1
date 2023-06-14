@@ -13,19 +13,15 @@
       <!-- 分割线 -->
       <div class="dividing-line"></div>
       <!-- 网页跳转按钮 -->
-      <!-- <div class="about-btn">
-        <div
-          class="about-btn-item"
-          v-for="(item, index) in btnDate"
-          :key="item.id">
-         
-        </div>
-      </div> -->
 
-      <div class="about-btn">
-        <div class="about-btn-item" v-for="fit in fits" :key="fit.id">
-          <!-- <el-image :src="fit.url"></el-image> -->
-          <i class="iconfont icon-github"></i>
+      <div>
+        <div class="about-btn">
+          <el-image
+            :src="fit.url"
+            v-for="fit in fits"
+            :key="fit.id"
+            class="about-btn-item"></el-image>
+          <!-- <i class="iconfont icon-github"></i> -->
         </div>
       </div>
 
@@ -55,13 +51,13 @@ export default {
       ],
 
       // ----------------------------------
-      btnDate: [
-        { img: "1" },
-        { img: "2" },
-        { img: "3" },
-        { img: "4" },
-        { img: "5" },
-      ],
+      // btnDate: [
+      //   { img: "1" },
+      //   { img: "2" },
+      //   { img: "3" },
+      //   { img: "4" },
+      //   { img: "5" },
+      // ],
       items: [
         {
           id: 1,
