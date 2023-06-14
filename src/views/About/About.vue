@@ -15,21 +15,16 @@
       <!-- 网页跳转按钮 -->
 
       <div>
-        <div class="about-btn">
-          <!-- <el-image
-            :src="fit.url"
-            v-for="fit in fits"
-            :key="fit.id"
-            class="about-btn-item"></el-image> -->
-          <!-- <i class="iconfont icon-github"></i> -->
-          <el-button
-            v-for="fit in fits"
-            :key="fit.id"
-            class="about-btn-item"
-            :type="fit.fits"
+        <div class="about-btn" >
+          <div class="about-btn-item"  v-for="fit in fits"
+            :key="fit.id">
+            <el-button
+            :type="fit.type"
             circle
-            ><i class="iconfont icon-github"></i
-          ></el-button>
+            :icon="fit.icon"
+            @click="open"
+            ></el-button></div>
+          
         </div>
       </div>
 
@@ -43,16 +38,21 @@ export default {
     return {
       fits: [
         {
-          url: "https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg",
+          type:"primary",
+          icon:"el-icon-orange"
+
         },
         {
-          url: "https://cube.elemecdn.com/6/94/4d3ea53c084bad6931a56d5158a48jpeg.jpeg",
+          type:"success",
+          icon:"el-icon-s-flag"
         },
         {
-          url: "https://fuss10.elemecdn.com/a/3f/3302e58f9a181d2509f3dc0fa68b0jpeg.jpeg",
+          type:"warning",
+          icon:"el-icon-umbrella"
         },
         {
-          url: "https://fuss10.elemecdn.com/1/34/19aa98b1fcb2781c4fba33d850549jpeg.jpeg",
+          type:"danger",
+          icon:"el-icon-no-smoking"
         },
       ],
       items: [
@@ -71,6 +71,25 @@ export default {
     gernerateId: function (index) {
       return "left_" + index
     },
+
+    // 弹框
+    open() {
+        this.$confirm('这是弹出框, 是否继续?', '提示', {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning'
+        }).then(() => {
+          this.$message({
+            type: 'success',
+            message: '弹出成功!'
+          });
+        }).catch(() => {
+          this.$message({
+            type: 'info',
+            message: '已取消弹出框'
+          });          
+        });
+      }
   },
 }
 // 今晚就到这里
@@ -127,27 +146,27 @@ export default {
       .about-btn-item {
         width: 40px;
         height: 40px;
-        background-color: #eadddd;
+        // background-color: #eadddd;
         border-radius: 50%;
         display: inline-block;
         margin: 18px 10px;
-        .about-btn-item:hover {
-          outline: none;
+        // .about-btn-item:hover {
+        //   outline: none;
 
-          // background: #208fc1;
+        //   // background: #208fc1;
 
-          /*执行动画*/
+        //   /*执行动画*/
 
-          -webkit-animation: showBtn 0.5s 1;
+        //   -webkit-animation: showBtn 0.5s 1;
 
-          animation: showBtn 0.5s 1;
+        //   animation: showBtn 0.5s 1;
 
-          /*停止在最后一帧*/
+        //   /*停止在最后一帧*/
 
-          -webkit-animation-fill-mode: forwards;
+        //   -webkit-animation-fill-mode: forwards;
 
-          animation-fill-mode: forwards;
-        }
+        //   animation-fill-mode: forwards;
+        // }
       }
     }
   }
