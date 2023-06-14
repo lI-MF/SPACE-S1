@@ -67,13 +67,8 @@ export default {
       ],
     }
   },
-  computed: {
-    // evenNumbers: function () {
-    //   return this.numbers.filter(function (number) {
-    //     return number % 2 === 0
-    //   })
-    // },
-  },
+  // computed: {
+  // },  //我命由我，不由天。
 
   methods: {
     gernerateId: function (index) {
@@ -81,6 +76,7 @@ export default {
     },
   },
 }
+// 今晚就到这里
 </script>
 
 <style lang="less" scoped>
