@@ -18,11 +18,6 @@ export default {
   width: 100%;
   // height: 500px;
   background: rgba(#000000, 0);
-  // .webcode-itemleft {
-  //   width: 20%;
-  //   height: 500px;
-  //   background-color: #ffffff;
-  // }
 }
 .text {
   font-size: 14px;
