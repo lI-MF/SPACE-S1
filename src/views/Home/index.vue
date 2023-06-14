@@ -22,6 +22,7 @@
           <el-menu-item index="/Home">首页</el-menu-item>
           <el-menu-item index="/News">新闻</el-menu-item>
           <el-menu-item index="/WebCode">前端</el-menu-item>
+          <el-menu-item index="/BackEnd">后端</el-menu-item>
           <el-menu-item index="/Photography">摄影日记</el-menu-item>
           <el-menu-item index="/About">关于</el-menu-item>
           <el-menu-item index="1"

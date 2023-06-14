@@ -16,12 +16,20 @@
 
       <div>
         <div class="about-btn">
-          <el-image
+          <!-- <el-image
             :src="fit.url"
             v-for="fit in fits"
             :key="fit.id"
-            class="about-btn-item"></el-image>
+            class="about-btn-item"></el-image> -->
           <!-- <i class="iconfont icon-github"></i> -->
+          <el-button
+            v-for="fit in fits"
+            :key="fit.id"
+            class="about-btn-item"
+            :type="fit.fits"
+            circle
+            ><i class="iconfont icon-github"></i
+          ></el-button>
         </div>
       </div>
 
@@ -33,8 +41,6 @@
 export default {
   data() {
     return {
-      // fits: ["fill", "contain", "cover", "none", "scale-down"],
-      // url: "https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg",
       fits: [
         {
           url: "https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg",
@@ -49,15 +55,6 @@ export default {
           url: "https://fuss10.elemecdn.com/1/34/19aa98b1fcb2781c4fba33d850549jpeg.jpeg",
         },
       ],
-
-      // ----------------------------------
-      // btnDate: [
-      //   { img: "1" },
-      //   { img: "2" },
-      //   { img: "3" },
-      //   { img: "4" },
-      //   { img: "5" },
-      // ],
       items: [
         {
           id: 1,
@@ -134,9 +131,23 @@ export default {
         border-radius: 50%;
         display: inline-block;
         margin: 18px 10px;
-      }
-      .about-btno {
-        width: 50px;
+        .about-btn-item:hover {
+          outline: none;
+
+          // background: #208fc1;
+
+          /*执行动画*/
+
+          -webkit-animation: showBtn 0.5s 1;
+
+          animation: showBtn 0.5s 1;
+
+          /*停止在最后一帧*/
+
+          -webkit-animation-fill-mode: forwards;
+
+          animation-fill-mode: forwards;
+        }
       }
     }
   }
