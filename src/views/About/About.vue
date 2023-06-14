@@ -84,7 +84,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-// @import "~@/static/iconfont/iconfont.css";
 .about {
   position: relative;
   .about-item {
