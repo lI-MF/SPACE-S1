@@ -3,10 +3,10 @@
     <router-view />
   </div>
 </template>
-<script>
-</script>
+<script></script>
 
 <style>
+@import "~/static/iconfont/iconfont.css";
 html body {
   margin: 0 auto;
   padding: 0 auto;

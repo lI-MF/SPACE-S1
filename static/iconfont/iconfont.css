@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4117275 */
+  src: url('iconfont.woff2?t=1686800070927') format('woff2'),
+       url('iconfont.woff?t=1686800070927') format('woff'),
+       url('iconfont.ttf?t=1686800070927') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-github:before {
+  content: "\e600";
+}
+
+.icon-csdn:before {
+  content: "\e601";
+}
+
+.icon-icon_xinlang-chunselogo:before {
+  content: "\e65e";
+}
+
+.icon-logo_facebook:before {
+  content: "\e681";
+}
+
+.icon-twitter:before {
+  content: "\ea90";
+}
+
+.icon-logo-google:before {
+  content: "\e9e0";
+}
+

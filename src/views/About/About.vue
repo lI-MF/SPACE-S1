@@ -15,16 +15,14 @@
       <!-- 网页跳转按钮 -->
 
       <div>
-        <div class="about-btn" >
-          <div class="about-btn-item"  v-for="fit in fits"
-            :key="fit.id">
+        <div class="about-btn">
+          <div class="about-btn-item" v-for="fit in fits" :key="fit.id">
             <el-button
-            :type="fit.type"
-            circle
-            :icon="fit.icon"
-            @click="open"
-            ></el-button></div>
-          
+              :type="fit.type"
+              circle
+              :icon="fit.icon"
+              @click="open"></el-button>
+          </div>
         </div>
       </div>
 
@@ -38,21 +36,20 @@ export default {
     return {
       fits: [
         {
-          type:"primary",
-          icon:"el-icon-orange"
-
+          type: "primary",
+          icon: "iconfont icon-github",
         },
         {
-          type:"success",
-          icon:"el-icon-s-flag"
+          type: "danger",
+          icon: "iconfont icon-csdn",
         },
         {
-          type:"warning",
-          icon:"el-icon-umbrella"
+          type: "warning",
+          icon: "iconfont icon-logo_facebook",
         },
         {
-          type:"danger",
-          icon:"el-icon-no-smoking"
+          type: "primary",
+          icon: "iconfont icon-twitter",
         },
       ],
       items: [
@@ -74,22 +71,24 @@ export default {
 
     // 弹框
     open() {
-        this.$confirm('这是弹出框, 是否继续?', '提示', {
-          confirmButtonText: '确定',
-          cancelButtonText: '取消',
-          type: 'warning'
-        }).then(() => {
+      this.$confirm("这是弹出框, 是否继续?", "提示", {
+        confirmButtonText: "确定",
+        cancelButtonText: "取消",
+        type: "warning",
+      })
+        .then(() => {
           this.$message({
-            type: 'success',
-            message: '弹出成功!'
-          });
-        }).catch(() => {
+            type: "success",
+            message: "弹出成功!",
+          })
+        })
+        .catch(() => {
           this.$message({
-            type: 'info',
-            message: '已取消弹出框'
-          });          
-        });
-      }
+            type: "info",
+            message: "已取消弹出框",
+          })
+        })
+    },
   },
 }
 // 今晚就到这里
@@ -144,29 +143,20 @@ export default {
       height: 75px;
       line-height: 20px;
       .about-btn-item {
-        width: 40px;
-        height: 40px;
+        // width: 40px;
+        // height: 40px;
         // background-color: #eadddd;
-        border-radius: 50%;
+        // border-radius: 50%;
         display: inline-block;
         margin: 18px 10px;
-        // .about-btn-item:hover {
-        //   outline: none;
-
-        //   // background: #208fc1;
-
-        //   /*执行动画*/
-
-        //   -webkit-animation: showBtn 0.5s 1;
-
-        //   animation: showBtn 0.5s 1;
-
-        //   /*停止在最后一帧*/
-
-        //   -webkit-animation-fill-mode: forwards;
-
-        //   animation-fill-mode: forwards;
-        // }
+        .el-button {
+          // color: #fff;
+          // background-color: #409eff;
+          // border-color: #409eff;
+          .iconfont {
+            font-size: 20px;
+          }
+        }
       }
     }
   }
