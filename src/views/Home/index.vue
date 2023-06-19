@@ -18,25 +18,12 @@
             :index="item.index"
             >{{ item.name }}</el-menu-item
           >
-          <!-- <el-menu-item index="/Home">首页</el-menu-item>
-          <el-menu-item index="/News">新闻</el-menu-item>
-          <el-menu-item index="/WebCode">前端</el-menu-item>
-          <el-menu-item index="/BackEnd">后端</el-menu-item>
-          <el-menu-item index="/Photography">摄影日记</el-menu-item>
-          <el-menu-item index="/About">关于</el-menu-item>-->
           <el-menu-item index="7"
             ><a href="https://juejin.cn" target="_parent">掘金</a></el-menu-item
           >
         </el-menu>
-        <!-- <div class="user-logo">SPACE-S1</div> -->
       </el-header>
-      <!-- <div class="opp-logo">
-        <el-image
-          style="width: 50px; height: 50px"
-          :src="url"
-          :fit="fit"></el-image>
-      </div> -->
-
+      <div class="title-logo">SPACE-S1</div>
       <el-main><router-view /></el-main>
     </el-container>
   </div>
@@ -105,13 +92,24 @@ export default {
 @import "~@/../static/css/colorblocks.less";
 .oop {
   background-color: #dc943b;
-  // .user-logo {
-  //   width: 50px;
-  //   height: 50px;
-  //   float: right;
-  //   background-color: #e1dbcd;
-  // }
+
   .container-s1 {
+    .title-logo {
+      position: absolute;
+      width: 100px;
+      height: 22px;
+      top: 0;
+      right: 50px;
+      background-image: linear-gradient(
+        to right,
+        hsl(223, 100%, 50%),
+        hsl(193, 67%, 51%)
+      );
+      -webkit-background-clip: text;
+      color: transparent;
+      font-weight: bold;
+      line-height: 32px;
+    }
     .header-s1 {
       width: 50%;
       height: 32px !important;
