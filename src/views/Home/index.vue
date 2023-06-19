@@ -2,13 +2,6 @@
   <div class="oop">
     <el-container class="container-s1">
       <el-header class="header-s1">
-        <!-- <div class="opp-logo">
-          <el-image
-            style="width: 50px; height: 50px"
-            :src="url"
-            :fit="fit"
-          ></el-image>
-        </div> -->
         <!-- 顶部导航 -->
         <el-menu
           :default-active="activeIndex2"
@@ -18,19 +11,32 @@
           background-color="#dc943b"
           text-color="#ffffff"
           active-text-color="#a95352">
-          <!-- <el-menu-item index="/Home"></el-menu-item> -->
-          <el-menu-item index="/Home">首页</el-menu-item>
+          <el-menu-item
+            v-for="(item, index) in toTitle"
+            :key="index"
+            :id="item.id"
+            :index="item.index"
+            >{{ item.name }}</el-menu-item
+          >
+          <!-- <el-menu-item index="/Home">首页</el-menu-item>
           <el-menu-item index="/News">新闻</el-menu-item>
           <el-menu-item index="/WebCode">前端</el-menu-item>
           <el-menu-item index="/BackEnd">后端</el-menu-item>
           <el-menu-item index="/Photography">摄影日记</el-menu-item>
-          <el-menu-item index="/About">关于</el-menu-item>
-          <el-menu-item index="1"
+          <el-menu-item index="/About">关于</el-menu-item>-->
+          <el-menu-item index="7"
             ><a href="https://juejin.cn" target="_parent">掘金</a></el-menu-item
           >
         </el-menu>
+        <!-- <div class="user-logo">SPACE-S1</div> -->
       </el-header>
-      <div>SPACE-S1</div>
+      <!-- <div class="opp-logo">
+        <el-image
+          style="width: 50px; height: 50px"
+          :src="url"
+          :fit="fit"></el-image>
+      </div> -->
+
       <el-main><router-view /></el-main>
     </el-container>
   </div>
@@ -43,6 +49,48 @@ export default {
       defaultHeight: {
         height: "",
       },
+      toTitle: [
+        {
+          id: 1,
+          index: "/Home",
+          name: "首页",
+        },
+        {
+          id: 2,
+          index: "/News",
+          name: "新闻",
+        },
+
+        {
+          id: 3,
+          index: "/WebCode",
+          name: "前端",
+        },
+
+        {
+          id: 4,
+          index: "/BackEnd",
+          name: "后端",
+        },
+
+        {
+          id: 5,
+          index: "/Photography",
+          name: "摄影日记",
+        },
+
+        {
+          id: 6,
+          index: "/About",
+          name: "关于",
+        },
+        // {
+        //   id: 7,
+        //   Url: "https://juejin.cn",
+        //   target: "_parent",
+        //   name: "掘金",
+        // },
+      ],
     }
   },
   methods: {
@@ -56,8 +104,16 @@ export default {
 <style lang="less">
 @import "~@/../static/css/colorblocks.less";
 .oop {
+  background-color: #dc943b;
+  // .user-logo {
+  //   width: 50px;
+  //   height: 50px;
+  //   float: right;
+  //   background-color: #e1dbcd;
+  // }
   .container-s1 {
     .header-s1 {
+      width: 50%;
       height: 32px !important;
     }
     .el-header,

@@ -27,16 +27,16 @@
       </div>
 
       <!--  -->
-      <comp-about>
+      <!-- <comp-about>
 
-      </comp-about>
+      </comp-about> -->
     </div>
   </div>
 </template>
 <script>
 import CompAbout from "../components/CompAbout.vue"
 export default {
-  components:{CompAbout},
+  components: { CompAbout },
   data() {
     return {
       fits: [
