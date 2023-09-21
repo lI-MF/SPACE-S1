@@ -21,6 +21,7 @@
               :type="fit.type"
               circle
               :icon="fit.icon"
+              :url="fit.url"
               @click="open"></el-button>
           </div>
         </div>
@@ -47,6 +48,7 @@ export default {
         {
           type: "danger",
           icon: "iconfont icon-csdn",
+          url: "https://blog.csdn.net/",
         },
         {
           type: "warning",

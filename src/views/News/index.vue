@@ -11,13 +11,13 @@
 </template>
 
 <script>
-import AboutView from "../components/CompAbout.vue";
+import AboutView from "../components/CompAbout.vue"
 export default {
   components: { AboutView },
   data() {
-    return {};
+    return {}
   },
-};
+}
 </script>
 <style lang="less" scoped>
 .news-item {
@@ -25,7 +25,7 @@ export default {
   // height: 600px;
   .new-out {
     background-color: #c45a65;
-    .new-out-item{
+    .new-out-item {
       height: 100px;
     }
   }
