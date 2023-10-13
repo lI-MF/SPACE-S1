@@ -20,14 +20,5 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.news-item {
-  width: 50%;
-  // height: 600px;
-  .new-out {
-    background-color: #c45a65;
-    .new-out-item {
-      height: 100px;
-    }
-  }
-}
+@import "~@/../static/css/colorblocks.less";
 </style>

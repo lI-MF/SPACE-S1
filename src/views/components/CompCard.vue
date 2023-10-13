@@ -2,7 +2,7 @@
   <div class="card-code">
     <div class="card-container">
       <!-- Left 卡片展示区 -->
-      <div class="card" v-for="item in arr1" :key="item.id">
+      <div class="card" v-for="item in arrImgText" :key="item.id">
         <el-image :src="item.imgUrl"
           ><div slot="placeholder" class="image-slot">
             加载中<span class="dot">...</span>
@@ -31,7 +31,7 @@
 export default {
   data() {
     return {
-      arr1: [
+      arrImgText: [
         {
           id: 1,
           title: "广东粤剧博物馆",
@@ -61,16 +61,17 @@ export default {
           title: "广州文化馆",
           imgUrl: require("@/./assets/imgage/gzwhg.jpg"),
           text: "广州市文化馆（原广州市群众艺术馆）成立于1956年，是国家设立的公益性文化事业单位，隶属于广州市文化广电旅游局。新馆项目选址于广州新中轴南段、海珠湖东北侧地块，北邻新滘中路、东靠新光快速路、西南与海珠湖相望。",
-        },{
+        },
+        {
           id: 6,
           title: "深圳人才公园",
           imgUrl: require("@/./assets/imgage/sz.jpg"),
           text: "人才公园地处深圳市南山区后海片区，毗邻深圳湾超级总部基地，与深圳湾滨海休闲带相连，占地面积77万平方米，其中湖体面积30万平方米。",
         },
       ],
-    };
+    }
   },
-};
+}
 </script>
 
 <style lang="less">
@@ -122,7 +123,7 @@ export default {
     .btn-card {
       position: absolute;
       right: 15px;
-      top: 2px;
+      bottom: 0;
       .el-button--primary {
         color: #fff;
         background-color: #409eff;

@@ -98,6 +98,7 @@ export default {
         //   target: "_parent",
         //   name: "掘金",
         // },
+        //
       ],
     }
   },
@@ -111,76 +112,4 @@ export default {
 </script>
 <style lang="less">
 @import "~@/../static/css/colorblocks.less";
-.oop {
-  background-color: #dc943b;
-
-  .container-s1 {
-    .title-logo {
-      position: absolute;
-      width: 100px;
-      height: 22px;
-      top: 0;
-      right: 50px;
-      background-image: linear-gradient(
-        to right,
-        hsl(0, 0%, 73%),
-        hsl(210, 11%, 96%)
-      );
-      -webkit-background-clip: text;
-      color: transparent;
-      font-weight: bold;
-      line-height: 32px;
-    }
-    .header-s1 {
-      width: 50%;
-      height: 32px !important;
-    }
-    .el-header,
-    .el-footer {
-      background-color: #dc943b;
-      color: #000;
-      text-align: center;
-      line-height: 32px;
-    }
-  }
-
-  .el-card__body,
-  .el-main {
-    width: 100%;
-    position: absolute;
-    top: 32px;
-    bottom: 0;
-    padding: 0px !important;
-    background-color: #ffffff;
-    color: #000;
-    text-align: center;
-    // line-height: 160px;
-    background-color: #e1dbcd;
-  }
-
-  body > .el-container {
-    margin-bottom: 40px;
-  }
-  .el-menu--horizontal > .el-menu-item {
-    float: left;
-    height: 32px;
-    line-height: 32px;
-    font-size: 14px;
-    font-family: Microsoft YaHei;
-    margin: 0;
-    border-bottom: 2px solid transparent;
-    color: #000;
-    .is-active {
-      color: #ffffff;
-    }
-  }
-  .el-container:nth-child(5) .el-aside,
-  .el-container:nth-child(6) .el-aside {
-    line-height: 260px;
-  }
-
-  .el-container:nth-child(7) .el-aside {
-    line-height: 320px;
-  }
-}
 </style>

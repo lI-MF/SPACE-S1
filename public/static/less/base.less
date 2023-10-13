@@ -1,0 +1,372 @@
+// body,
+// html {
+//     height: 100%;
+//     margin: 0;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+// =================================登录动画=================================//
+@keyframes rotate {
+    0% {
+        transform: perspective(400px) rotateZ(5deg) rotateX(-60deg) rotateY(0);
+    }
+
+    100% {
+        transform: perspective(400px) rotateZ(5deg) rotateX(-60deg) rotateY(-360deg);
+    }
+}
+
+.loing-stars {
+    .stars {
+        z-index: 999;
+        position: absolute;
+        transform: perspective(500px);
+        transform-style: preserve-3d;
+        perspective-origin: 50% 90%;
+        animation: rotate 90s infinite linear;
+        bottom: 0;
+
+        .star {
+            width: 2px;
+            height: 2px;
+            background: #f7f7b8;
+            position: absolute;
+            top: 0;
+            left: 0;
+            backface-visibility: hidden;
+        }
+    }
+}
+
+// =================================主页=================================//
+.home {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .home-item-content {
+        width: 100%;
+        margin: 0 10%;
+        display: flex;
+        justify-content: center;
+        // align-items: center;
+
+        // 左边
+        .home-item-left {
+            width: 75%;
+            padding: 0 10px;
+
+            .content-main {
+                .content-item {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    background-color: #ffffff;
+                    box-shadow: 3px 5px 5px #656b79;
+                    border-radius: 6px;
+                    margin-bottom: 10px;
+
+                    .content-title {
+                        // display: flex;
+                        font-size: 20px;
+                        font-weight: bold;
+                        text-align: left;
+                        padding: 10px;
+                        // justify-content: flex-start;
+                        // align-items: center;
+                    }
+
+                    .release-time {
+                        font-size: 12px;
+                        color: #797979;
+                        padding-left: 10px;
+                        display: flex;
+                        justify-content: flex-start;
+
+                        .release {
+                            padding: 0 5px;
+                        }
+                    }
+
+                    .content-box {
+                        font-size: 14px;
+                        text-indent: 2em;
+                        text-align: left;
+                        display: flex;
+                        justify-content: flex-start;
+                        // align-items: center;
+                        padding: 10px 10px 0 10px;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 3;
+                        overflow: hidden;
+                    }
+
+                    .full-text {
+                        text-align: left;
+                        padding: 10px 10px;
+
+                        .el-link.el-link--default:hover {
+                            color: #dc943b;
+                        }
+
+                        .el-link.is-underline:hover:after {
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            height: 0;
+                            bottom: 0;
+                            border-bottom: 0;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        // 右边
+        .home-item-right {
+            width: 25%;
+            height: 558px;
+            margin: 0 10px;
+            background-color: #ffffff;
+            border-radius: 6px;
+            box-shadow: 3px 5px 5px #656b79;
+
+            // 日历
+            .home-date {
+                height: 340px;
+
+                .el-calendar {
+                    border-radius: 6px;
+
+                    .el-calendar__header {
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: column;
+                        padding: 12px 4px;
+                        border-bottom: 1px solid #ebeef5;
+
+                        .el-calendar__title {
+                            font-size: 14px;
+                            color: #000;
+                            align-self: center;
+                        }
+
+                        .el-calendar__button-group {
+                            margin-top: 10px;
+
+                            .el-button-group {
+                                display: inline-block;
+                                vertical-align: middle;
+
+                                .el-button:active {
+                                    color: #ffffff;
+                                    border-color: #f2b263;
+                                    background-color: #f2b263;
+                                    outline: 0;
+                                }
+
+                                .el-button:focus {
+                                    color: #ffffff;
+                                    border-color: #f2b263;
+                                    background-color: #f2b263;
+                                }
+
+                                .el-button:hover {
+                                    color: #ffffff;
+                                    border-color: #f2b263;
+                                    background-color: #f2b263;
+                                }
+
+                            }
+                        }
+
+                    }
+
+                    .el-calendar__body {
+                        padding: 0 2px;
+
+                        .el-calendar-table {
+                            td.is-selected {
+                                background-color: #ffffff;
+                            }
+
+                            td.is-today {
+                                color: #dc943b;
+                            }
+
+                            .el-calendar-day {
+                                box-sizing: border-box;
+                                padding: 8px;
+                                height: 36px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // 时间线
+            .home-news {
+                // width: 100%;
+                // height: 10rem;
+                // position: absolute;
+                // bottom: 0;
+                // left: 0;
+
+                .block {
+                    height: 9rem;
+
+                    .el-timeline {
+                        height: 10rem;
+                        // margin: 8px;
+                        list-style: none;
+                        overflow-y: auto;
+                        padding: 0 10px;
+
+                        .el-timeline-item {
+                            position: relative;
+                            padding-bottom: 8px;
+
+                            .el-timeline-item__wrapper {
+                                position: relative;
+                                padding-left: 20px;
+                                top: -3px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.oop {
+    background-color: #dc943b;
+
+    .container-s1 {
+        .title-logo {
+            position: absolute;
+            width: 100px;
+            height: 22px;
+            top: 0;
+            right: 50px;
+            background-image: linear-gradient(to right,
+                    hsl(0, 0%, 73%),
+                    hsl(210, 11%, 96%));
+            -webkit-background-clip: text;
+            color: transparent;
+            font-weight: bold;
+            line-height: 32px;
+        }
+
+        .header-s1 {
+            width: 50%;
+            height: 32px !important;
+        }
+
+        .el-header,
+        .el-footer {
+            background-color: #dc943b;
+            color: #000;
+            text-align: center;
+            line-height: 32px;
+        }
+    }
+
+    .el-card__body,
+    .el-main {
+        width: 100%;
+        position: absolute;
+        top: 32px;
+        bottom: 0;
+        padding: 0px !important;
+        background-color: #ffffff;
+        color: #000;
+        text-align: center;
+        // line-height: 160px;
+        background-color: #e1dbcd;
+    }
+
+    body>.el-container {
+        margin-bottom: 40px;
+    }
+
+    .el-menu--horizontal>.el-menu-item {
+        float: left;
+        height: 32px;
+        line-height: 32px;
+        font-size: 14px;
+        font-family: Microsoft YaHei;
+        margin: 0;
+        border-bottom: 2px solid transparent;
+        color: #000;
+
+        .is-active {
+            color: #ffffff;
+        }
+    }
+
+    .el-container:nth-child(5) .el-aside,
+    .el-container:nth-child(6) .el-aside {
+        line-height: 260px;
+    }
+
+    .el-container:nth-child(7) .el-aside {
+        line-height: 320px;
+    }
+}
+
+// =================================新闻================================= //
+.news-item {
+    width: 50%;
+
+    // height: 600px;
+    .new-out {
+        background-color: hsl(354, 47%, 56%);
+
+        .new-out-item {
+            height: 100px;
+        }
+    }
+}
+
+// =================================前端================================= //
+.web-code {
+    position: relative;
+    width: 100%;
+    // height: 500px;
+    background: rgba(#000000, 0);
+    // .webcode-itemleft {
+    //   width: 20%;
+    //   height: 500px;
+    //   background-color: #ffffff;
+    // }
+
+    .border-text {
+        position: absolute;
+        width: 50%;
+        height: 400px;
+        left: 50%;
+        top: -50%;
+        transform: translate(-50%, 50%);
+        border: 1px solid #000000;
+    }
+}
+
+.text {
+    font-size: 14px;
+}
+
+.item {
+    padding: 18px 0;
+}
+
+.box-card {
+    width: 40%;
+    /* margin: ; */
+}

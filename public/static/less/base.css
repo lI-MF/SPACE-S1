@@ -1,0 +1,270 @@
+@keyframes rotate {
+  0% {
+    transform: perspective(400px) rotateZ(5deg) rotateX(-60deg) rotateY(0);
+  }
+  100% {
+    transform: perspective(400px) rotateZ(5deg) rotateX(-60deg) rotateY(-360deg);
+  }
+}
+.loing-stars .stars {
+  z-index: 999;
+  position: absolute;
+  transform: perspective(500px);
+  transform-style: preserve-3d;
+  perspective-origin: 50% 90%;
+  animation: rotate 90s infinite linear;
+  bottom: 0;
+}
+.loing-stars .stars .star {
+  width: 2px;
+  height: 2px;
+  background: #f7f7b8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+}
+.home {
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home .home-item-content {
+  width: 100%;
+  margin: 0 10%;
+  display: flex;
+  justify-content: center;
+}
+.home .home-item-content .home-item-left {
+  width: 75%;
+  padding: 0 10px;
+}
+.home .home-item-content .home-item-left .content-main .content-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  box-shadow: 3px 5px 5px #656b79;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.home .home-item-content .home-item-left .content-main .content-item .content-title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px;
+}
+.home .home-item-content .home-item-left .content-main .content-item .release-time {
+  font-size: 12px;
+  color: #797979;
+  padding-left: 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+.home .home-item-content .home-item-left .content-main .content-item .release-time .release {
+  padding: 0 5px;
+}
+.home .home-item-content .home-item-left .content-main .content-item .content-box {
+  font-size: 14px;
+  text-indent: 2em;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px 10px 0 10px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.home .home-item-content .home-item-left .content-main .content-item .full-text {
+  text-align: left;
+  padding: 10px 10px;
+}
+.home .home-item-content .home-item-left .content-main .content-item .full-text .el-link.el-link--default:hover {
+  color: #dc943b;
+}
+.home .home-item-content .home-item-left .content-main .content-item .full-text .el-link.is-underline:hover:after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0;
+  bottom: 0;
+  border-bottom: 0;
+}
+.home .home-item-content .home-item-right {
+  width: 25%;
+  height: 558px;
+  margin: 0 10px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  box-shadow: 3px 5px 5px #656b79;
+}
+.home .home-item-content .home-item-right .home-date {
+  height: 340px;
+}
+.home .home-item-content .home-item-right .home-date .el-calendar {
+  border-radius: 6px;
+}
+.home .home-item-content .home-item-right .home-date .el-calendar .el-calendar__header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 12px 4px;
+  border-bottom: 1px solid #ebeef5;
+}
+.home .home-item-content .home-item-right .home-date .el-calendar .el-calendar__header .el-calendar__title {
+  font-size: 14px;
+  color: #000;
+  align-self: center;
+}
+.home .home-item-content .home-item-right .home-date .el-calendar .el-calendar__header .el-calendar__button-group {
+  margin-top: 10px;
+}
+.home .home-item-content .home-item-right .home-date .el-calendar .el-calendar__header .el-calendar__button-group .el-button-group {
+  display: inline-block;
+  vertical-align: middle;
+}
+.home .home-item-content .home-item-right .home-date .el-calendar .el-calendar__header .el-calendar__button-group .el-button-group .el-button:active {
+  color: #ffffff;
+  border-color: #f2b263;
+  background-color: #f2b263;
+  outline: 0;
+}
+.home .home-item-content .home-item-right .home-date .el-calendar .el-calendar__header .el-calendar__button-group .el-button-group .el-button:focus {
+  color: #ffffff;
+  border-color: #f2b263;
+  background-color: #f2b263;
+}
+.home .home-item-content .home-item-right .home-date .el-calendar .el-calendar__header .el-calendar__button-group .el-button-group .el-button:hover {
+  color: #ffffff;
+  border-color: #f2b263;
+  background-color: #f2b263;
+}
+.home .home-item-content .home-item-right .home-date .el-calendar .el-calendar__body {
+  padding: 0 2px;
+}
+.home .home-item-content .home-item-right .home-date .el-calendar .el-calendar__body .el-calendar-table td.is-selected {
+  background-color: #ffffff;
+}
+.home .home-item-content .home-item-right .home-date .el-calendar .el-calendar__body .el-calendar-table td.is-today {
+  color: #dc943b;
+}
+.home .home-item-content .home-item-right .home-date .el-calendar .el-calendar__body .el-calendar-table .el-calendar-day {
+  box-sizing: border-box;
+  padding: 8px;
+  height: 36px;
+}
+.home .home-item-content .home-item-right .home-news .block {
+  height: 9rem;
+}
+.home .home-item-content .home-item-right .home-news .block .el-timeline {
+  height: 10rem;
+  list-style: none;
+  overflow-y: auto;
+  padding: 0 10px;
+}
+.home .home-item-content .home-item-right .home-news .block .el-timeline .el-timeline-item {
+  position: relative;
+  padding-bottom: 8px;
+}
+.home .home-item-content .home-item-right .home-news .block .el-timeline .el-timeline-item .el-timeline-item__wrapper {
+  position: relative;
+  padding-left: 20px;
+  top: -3px;
+}
+.oop {
+  background-color: #dc943b;
+}
+.oop .container-s1 .title-logo {
+  position: absolute;
+  width: 100px;
+  height: 22px;
+  top: 0;
+  right: 50px;
+  background-image: linear-gradient(to right, hsl(0, 0%, 73%), hsl(210, 11%, 96%));
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  line-height: 32px;
+}
+.oop .container-s1 .header-s1 {
+  width: 50%;
+  height: 32px !important;
+}
+.oop .container-s1 .el-header,
+.oop .container-s1 .el-footer {
+  background-color: #dc943b;
+  color: #000;
+  text-align: center;
+  line-height: 32px;
+}
+.oop .el-card__body,
+.oop .el-main {
+  width: 100%;
+  position: absolute;
+  top: 32px;
+  bottom: 0;
+  padding: 0px !important;
+  background-color: #ffffff;
+  color: #000;
+  text-align: center;
+  background-color: #e1dbcd;
+}
+.oop body > .el-container {
+  margin-bottom: 40px;
+}
+.oop .el-menu--horizontal > .el-menu-item {
+  float: left;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  font-family: Microsoft YaHei;
+  margin: 0;
+  border-bottom: 2px solid transparent;
+  color: #000;
+}
+.oop .el-menu--horizontal > .el-menu-item .is-active {
+  color: #ffffff;
+}
+.oop .el-container:nth-child(5) .el-aside,
+.oop .el-container:nth-child(6) .el-aside {
+  line-height: 260px;
+}
+.oop .el-container:nth-child(7) .el-aside {
+  line-height: 320px;
+}
+.news-item {
+  width: 50%;
+}
+.news-item .new-out {
+  background-color: hsl(354, 47%, 56%);
+}
+.news-item .new-out .new-out-item {
+  height: 100px;
+}
+.web-code {
+  position: relative;
+  width: 100%;
+  background: rgba(0, 0, 0, 0);
+}
+.web-code .border-text {
+  position: absolute;
+  width: 50%;
+  height: 400px;
+  left: 50%;
+  top: -50%;
+  transform: translate(-50%, 50%);
+  border: 1px solid #000000;
+}
+.text {
+  font-size: 14px;
+}
+.item {
+  padding: 18px 0;
+}
+.box-card {
+  width: 40%;
+  /* margin: ; */
+}
