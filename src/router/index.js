@@ -7,6 +7,7 @@ import News from "../views/News/index.vue"
 import WebCode from "../views/WebCode/index.vue"
 import BackEnd from "../views/BackEnd/index.vue"
 import About from "../views/About/About.vue"
+import Details from "../views/Details/Details.vue"
 
 import Photography from "../views/Photography/Photography.vue"
 import Login from "../views/Login/index.vue"
@@ -51,6 +52,7 @@ const routes = [
       },
     ],
   },
+
   {
     path: "/Login",
     name: "/Login",
@@ -60,6 +62,12 @@ const routes = [
     path: "/",
     routes: "/Login",
     component: Login,
+  },
+  // 详情页
+  {
+    path: "/Details",
+    name: "Details",
+    component: Details,
   },
 ]
 
