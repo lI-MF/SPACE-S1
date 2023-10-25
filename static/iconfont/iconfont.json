@@ -6,6 +6,62 @@
   "description": "个人博客",
   "glyphs": [
     {
+      "icon_id": "11372703",
+      "name": "首页",
+      "font_class": "shouye",
+      "unicode": "e8b9",
+      "unicode_decimal": 59577
+    },
+    {
+      "icon_id": "26393469",
+      "name": "icon_归档_2",
+      "font_class": "icon_guidang_2",
+      "unicode": "e64d",
+      "unicode_decimal": 58957
+    },
+    {
+      "icon_id": "1075",
+      "name": "照相机",
+      "font_class": "zhaoxiangji",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "1625615",
+      "name": "edit编辑2",
+      "font_class": "editbianji",
+      "unicode": "e6d7",
+      "unicode_decimal": 59095
+    },
+    {
+      "icon_id": "8219242",
+      "name": "关于",
+      "font_class": "guanyu",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "14200833",
+      "name": "tree",
+      "font_class": "tree",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "29723787",
+      "name": "willow",
+      "font_class": "willow",
+      "unicode": "e827",
+      "unicode_decimal": 59431
+    },
+    {
+      "icon_id": "37635066",
+      "name": "实验-L",
+      "font_class": "shiyan-L",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
       "icon_id": "1387",
       "name": "github",
       "font_class": "github",

@@ -5,29 +5,29 @@
         <!-- 顶部导航 -->
         <el-menu
           :default-active="activeIndex2"
-          class="el-menu-demo"
+          class="top-menu"
           mode="horizontal"
-          @select="handleSelect"
-          background-color="#dc943b"
-          text-color="#ffffff"
-          active-text-color="#a95352">
+          @select="handleSelect">
           <el-menu-item
             v-for="(item, index) in toTitle"
             :key="index"
             :id="item.id"
-            :index="item.index"
-            >{{ item.name }}</el-menu-item
-          >
-          <el-menu-item index="7"
+            :index="item.index">
+            <div class="menu-title">
+              <i :class="item.icon"></i>
+              <span>{{ item.name }}</span>
+            </div>
+          </el-menu-item>
+          <!-- <el-menu-item index="7"
             ><a href="https://juejin.cn" target="_parent">掘金</a></el-menu-item
-          >
+          > -->
         </el-menu>
       </el-header>
       <div class="title-logo">SPACE-S1</div>
       <el-main><router-view /></el-main>
     </el-container>
 
-    <nav class="nav">
+    <!-- <nav class="nav">
       <input type="checkbox" class="nav__cb" id="menu-cb" />
       <div class="nav__content">
         <ul class="nav__items">
@@ -46,7 +46,7 @@
         </ul>
       </div>
       <label class="nav__btn" for="menu-cb"></label>
-    </nav>
+    </nav> -->
   </div>
 </template>
 <script>
@@ -61,35 +61,47 @@ export default {
         {
           id: 1,
           index: "/Home",
+          icon: "iconfont icon-shouye",
           name: "首页",
         },
         {
           id: 2,
-          index: "/News",
-          name: "新闻",
+          index: "/TheLab",
+          icon: "iconfont icon-shiyan-L",
+          name: "实验室",
         },
 
         {
           id: 3,
-          index: "/WebCode",
-          name: "前端",
+          index: "/TreeHoles",
+          icon: "iconfont icon-willow",
+          name: "树洞",
         },
 
         {
           id: 4,
-          index: "/BackEnd",
-          name: "后端",
+          index: "/MyFile",
+          icon: "iconfont icon-icon_guidang_2",
+          name: "归档",
         },
-
         {
           id: 5,
-          index: "/Photography",
-          name: "摄影日记",
+          index: "/MyEditor",
+          icon: "iconfont icon-editbianji",
+          name: "写博客",
         },
 
         {
           id: 6,
+          index: "/Photography",
+          icon: "iconfont icon-zhaoxiangji",
+          name: "摄影日记",
+        },
+
+        {
+          id: 7,
           index: "/About",
+          icon: "iconfont icon-guanyu",
           name: "关于",
         },
         // {
@@ -112,4 +124,5 @@ export default {
 </script>
 <style lang="less">
 @import "~@/../static/css/colorblocks.less";
+// @import "~@/../static/iconfont/iconfont.css";
 </style>

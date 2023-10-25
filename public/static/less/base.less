@@ -248,6 +248,8 @@
 .oop {
     background-color: #dc943b;
 
+
+
     .container-s1 {
         .title-logo {
             position: absolute;
@@ -261,20 +263,60 @@
             -webkit-background-clip: text;
             color: transparent;
             font-weight: bold;
-            line-height: 32px;
+            line-height: 30px;
         }
 
         .header-s1 {
             width: 50%;
             height: 32px !important;
-        }
-
-        .el-header,
-        .el-footer {
             background-color: #dc943b;
-            color: #000;
-            text-align: center;
-            line-height: 32px;
+
+            .el-menu {
+                // border-right: solid 1px #e6e6e6;
+                list-style: none;
+                position: relative;
+                margin: 0;
+                padding-left: 0;
+                background-color: #dc943b;
+            }
+
+            .el-menu-item {
+                .menu-title i {
+                    color: #ffffff;
+                    margin: 0 4px;
+                }
+            }
+
+            .el-menu--horizontal>.el-menu-item.is-active {
+                border-bottom: 2px solid hsl(33, 70%, 55%);
+                color: hsl(33, 78%, 33%);
+
+                .menu-title {
+                    color: hsl(33, 78%, 33%);
+                }
+            }
+
+            .el-menu--horizontal>.el-menu-item:not(.is-disabled):focus,
+            .el-menu--horizontal>.el-menu-item:not(.is-disabled):hover,
+            .el-menu--horizontal>.el-submenu .el-submenu__title:hover {
+                background-color: transparent;
+            }
+
+            .el-menu--horizontal .el-menu-item:not(.is-disabled):focus,
+            .el-menu--horizontal .el-menu-item:not(.is-disabled):hover {
+                outline: 0;
+                color: hsl(33, 78%, 33%);
+
+                // i:focus {
+                //     color: hsl(33, 78%, 33%);
+                // }
+
+                // .menu-title i>span:hover {
+                //     color: hsl(33, 78%, 33%);
+                // }
+            }
+
+
         }
     }
 
@@ -299,12 +341,12 @@
     .el-menu--horizontal>.el-menu-item {
         float: left;
         height: 32px;
-        line-height: 32px;
+        line-height: 30px;
         font-size: 14px;
         font-family: Microsoft YaHei;
         margin: 0;
         border-bottom: 2px solid transparent;
-        color: #000;
+        color: #ffffff;
 
         .is-active {
             color: #ffffff;

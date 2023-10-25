@@ -187,18 +187,40 @@
   -webkit-background-clip: text;
   color: transparent;
   font-weight: bold;
-  line-height: 32px;
+  line-height: 30px;
 }
 .oop .container-s1 .header-s1 {
   width: 50%;
   height: 32px !important;
-}
-.oop .container-s1 .el-header,
-.oop .container-s1 .el-footer {
   background-color: #dc943b;
-  color: #000;
-  text-align: center;
-  line-height: 32px;
+}
+.oop .container-s1 .header-s1 .el-menu {
+  list-style: none;
+  position: relative;
+  margin: 0;
+  padding-left: 0;
+  background-color: #dc943b;
+}
+.oop .container-s1 .header-s1 .el-menu-item .menu-title i {
+  color: #ffffff;
+  margin: 0 4px;
+}
+.oop .container-s1 .header-s1 .el-menu--horizontal > .el-menu-item.is-active {
+  border-bottom: 2px solid hsl(33, 70%, 55%);
+  color: hsl(33, 78%, 33%);
+}
+.oop .container-s1 .header-s1 .el-menu--horizontal > .el-menu-item.is-active .menu-title {
+  color: hsl(33, 78%, 33%);
+}
+.oop .container-s1 .header-s1 .el-menu--horizontal > .el-menu-item:not(.is-disabled):focus,
+.oop .container-s1 .header-s1 .el-menu--horizontal > .el-menu-item:not(.is-disabled):hover,
+.oop .container-s1 .header-s1 .el-menu--horizontal > .el-submenu .el-submenu__title:hover {
+  background-color: transparent;
+}
+.oop .container-s1 .header-s1 .el-menu--horizontal .el-menu-item:not(.is-disabled):focus,
+.oop .container-s1 .header-s1 .el-menu--horizontal .el-menu-item:not(.is-disabled):hover {
+  outline: 0;
+  color: hsl(33, 78%, 33%);
 }
 .oop .el-card__body,
 .oop .el-main {
@@ -218,12 +240,12 @@
 .oop .el-menu--horizontal > .el-menu-item {
   float: left;
   height: 32px;
-  line-height: 32px;
+  line-height: 30px;
   font-size: 14px;
   font-family: Microsoft YaHei;
   margin: 0;
   border-bottom: 2px solid transparent;
-  color: #000;
+  color: #ffffff;
 }
 .oop .el-menu--horizontal > .el-menu-item .is-active {
   color: #ffffff;
