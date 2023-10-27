@@ -377,38 +377,88 @@
     }
 }
 
-// =================================前端================================= //
-.web-code {
-    position: relative;
-    width: 100%;
-    // height: 500px;
-    background: rgba(#000000, 0);
-    // .webcode-itemleft {
-    //   width: 20%;
-    //   height: 500px;
-    //   background-color: #ffffff;
-    // }
+// =================================写博客================================= //
+#edit-blog {
+    margin: 20px auto;
+    max-width: 80%;
+    padding: 20px;
 
-    .border-text {
-        position: absolute;
-        width: 50%;
-        height: 400px;
-        left: 50%;
-        top: -50%;
-        transform: translate(-50%, 50%);
-        border: 1px solid #000000;
+    * {
+        box-sizing: border-box;
+    }
+
+    label {
+        display: block;
+        margin: 20px 0 10px;
+    }
+
+    input[type="text"],
+    textarea {
+        display: block;
+        width: 100%;
+        padding: 8px;
+    }
+
+    .editbt {
+        margin-top: 10px;
+        font-size: 16px;
+        width: auto;
+        padding: 6px;
+        height: auto;
+        border-radius: 5px;
     }
 }
 
-.text {
-    font-size: 14px;
+
+
+
+
+
+// input[type="checkbox"] {
+//     width: 20px;
+//     margin-right: 40px;
+//     margin-top: 20px;
+// }
+
+// textarea {
+//     height: 200px;
+// }
+
+// #checkboxes label {
+//     display: inline-block;
+//     margin-top: 0;
+// }
+
+// #checkboxes input {
+//     display: inline-block;
+//     margin-left: 10px;
+// }
+
+button {
+    display: block;
+    margin: 20px 0;
+    background: hsl(33, 70%, 55%);
+    color: #fff;
+    border: 0;
+    padding: 14px;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
 }
 
-.item {
-    padding: 18px 0;
+#preview {
+    padding: 10px 20px;
+    border: 1px dotted #ccc;
+    margin: 30px 0;
+
+    h2 {
+        margin-top: 10px;
+    }
 }
 
-.box-card {
-    width: 40%;
-    /* margin: ; */
+
+
+
+.bj {
+    margin: 5px 0;
 }
