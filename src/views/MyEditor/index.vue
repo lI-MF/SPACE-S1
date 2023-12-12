@@ -66,7 +66,7 @@
         item
       }}</el-tag>
       <hr class="bj" noshade color="#CCCCCC" />
-      <p v-html="blog.content"></p>
+      <p class="blog-preview" v-html="blog.content"></p>
     </div>
   </div>
 </template>

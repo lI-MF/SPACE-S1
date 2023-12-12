@@ -257,6 +257,115 @@
 .oop .el-container:nth-child(7) .el-aside {
   line-height: 320px;
 }
+.TreeHoles {
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.TreeHoles .TreeHoles-item-content {
+  width: 80%;
+}
+.TreeHoles .TreeHoles-item-content .content-main .content-issue {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  box-shadow: 3px 5px 5px #656b79;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  height: 180px;
+}
+.TreeHoles .TreeHoles-item-content .content-main .content-issue .el-form .el-form-item {
+  margin-bottom: auto;
+}
+.TreeHoles .TreeHoles-item-content .content-main .content-issue .el-form .el-form-item .el-form-item__content {
+  margin-left: auto;
+}
+.TreeHoles .TreeHoles-item-content .content-main .content-issue .el-form .el-form-item .el-form-item__content .form-conten {
+  position: relative;
+}
+.TreeHoles .TreeHoles-item-content .content-main .content-issue .el-form .el-form-item .el-form-item__content .form-conten .el-textarea {
+  width: 97%;
+  padding: 15px;
+}
+.TreeHoles .TreeHoles-item-content .content-main .content-issue .el-form .el-form-item .el-form-item__content .form-conten .remaining {
+  position: absolute;
+  font-size: 12px;
+  bottom: 10px;
+  right: 30px;
+}
+.TreeHoles .TreeHoles-item-content .content-main .content-issue .el-textarea__inner {
+  resize: none;
+}
+.TreeHoles .TreeHoles-item-content .content-main .content-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  box-shadow: 3px 5px 5px #656b79;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.TreeHoles .TreeHoles-item-content .content-main .content-item .user {
+  padding: 10px;
+  text-align: left;
+  display: flex;
+  justify-items: center;
+}
+.TreeHoles .TreeHoles-item-content .content-main .content-item .user .el-image {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-items: flex-end;
+  border-radius: 50%;
+}
+.TreeHoles .TreeHoles-item-content .content-main .content-item .user .content-title {
+  font-size: 16px;
+  color: #797979;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  padding-left: 10px;
+}
+.TreeHoles .TreeHoles-item-content .content-main .content-item .release-time {
+  font-size: 12px;
+  color: #797979;
+  padding-left: 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+.TreeHoles .TreeHoles-item-content .content-main .content-item .release-time .release {
+  padding: 0 5px;
+}
+.TreeHoles .TreeHoles-item-content .content-main .content-item .content-box {
+  font-size: 14px;
+  text-indent: 2em;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px 10px 0 10px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.TreeHoles .TreeHoles-item-content .content-main .content-item .full-text {
+  text-align: left;
+  padding: 10px 10px;
+}
+.TreeHoles .TreeHoles-item-content .content-main .content-item .full-text .el-link.el-link--default:hover {
+  color: #dc943b;
+}
+.TreeHoles .TreeHoles-item-content .content-main .content-item .full-text .el-link.is-underline:hover:after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0;
+  bottom: 0;
+  border-bottom: 0;
+}
 .news-item {
   width: 50%;
 }
@@ -284,6 +393,20 @@
   width: 100%;
   padding: 8px;
 }
+#edit-blog .v-note-wrapper .v-note-panel {
+  position: relative;
+  border-top: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+}
 #edit-blog .editbt {
   margin-top: 10px;
   font-size: 16px;
@@ -310,6 +433,10 @@ button {
 }
 #preview h2 {
   margin-top: 10px;
+}
+#preview .blog-preview {
+  text-indent: 2em;
+  text-align: left;
 }
 .bj {
   margin: 5px 0;

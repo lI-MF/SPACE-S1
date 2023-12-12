@@ -33,7 +33,6 @@
 
 <script>
 import CompContent from "../components/CompContent.vue"
-// import CompDetails from "../components/CompDetails.vue"
 import CompDetails from "../../components/CompDetails.vue"
 
 export default {

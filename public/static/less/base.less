@@ -363,6 +363,159 @@
     }
 }
 
+// =================================树洞=================================//
+.TreeHoles {
+    width: 100%;
+    padding: 10px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .TreeHoles-item-content {
+        width: 80%;
+
+        .content-main {
+            .content-issue {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                background-color: #ffffff;
+                box-shadow: 3px 5px 5px #656b79;
+                border-radius: 6px;
+                margin-bottom: 10px;
+                height: 180px;
+
+                .el-form {
+                    .el-form-item {
+                        margin-bottom: auto;
+
+                        .el-form-item__content {
+                            margin-left: auto;
+
+                            .form-conten {
+                                position: relative;
+
+                                .el-textarea {
+                                    width: 97%;
+                                    padding: 15px;
+                                }
+
+                                .remaining {
+                                    position: absolute;
+                                    font-size: 12px;
+                                    bottom: 10px;
+                                    right: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+
+                // .el-color-picker__icon,
+                // .el-input,
+                // .el-textarea {
+                //     width: auto;
+                // }
+
+                // .el-textarea {
+                //     position: relative;
+                //     vertical-align: bottom;
+                //     font-size: 14px;
+                //     padding: 10px;
+
+                // }
+
+                .el-textarea__inner {
+                    resize: none;
+                }
+            }
+
+            .content-item {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                background-color: #ffffff;
+                box-shadow: 3px 5px 5px #656b79;
+                border-radius: 6px;
+                margin-bottom: 10px;
+
+                .user {
+                    padding: 10px;
+                    text-align: left;
+                    display: flex;
+                    justify-items: center;
+
+                    .el-image {
+                        width: 25px;
+                        height: 25px;
+                        display: flex;
+                        justify-items: flex-end;
+                        border-radius: 50%;
+                    }
+
+                    .content-title {
+                        font-size: 16px;
+                        color: #797979;
+                        // font-weight: bold;
+                        display: flex;
+                        justify-items: center;
+                        align-items: center;
+                        padding-left: 10px;
+                    }
+                }
+
+                .release-time {
+                    font-size: 12px;
+                    color: #797979;
+                    padding-left: 10px;
+                    display: flex;
+                    justify-content: flex-start;
+
+                    .release {
+                        padding: 0 5px;
+                    }
+                }
+
+                .content-box {
+                    font-size: 14px;
+                    text-indent: 2em;
+                    text-align: left;
+                    display: flex;
+                    justify-content: flex-start;
+                    // align-items: center;
+                    padding: 10px 10px 0 10px;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 3;
+                    overflow: hidden;
+                }
+
+                .full-text {
+                    text-align: left;
+                    padding: 10px 10px;
+
+                    .el-link.el-link--default:hover {
+                        color: #dc943b;
+                    }
+
+                    .el-link.is-underline:hover:after {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        height: 0;
+                        bottom: 0;
+                        border-bottom: 0;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
 // =================================新闻================================= //
 .news-item {
     width: 50%;
@@ -382,9 +535,11 @@
     margin: 20px auto;
     max-width: 80%;
     padding: 20px;
+    // overflow-y: auto;
 
     * {
         box-sizing: border-box;
+
     }
 
     label {
@@ -397,6 +552,21 @@
         display: block;
         width: 100%;
         padding: 8px;
+    }
+
+    .v-note-wrapper .v-note-panel {
+        position: relative;
+        border-top: none;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .editbt {
@@ -454,6 +624,11 @@ button {
     h2 {
         margin-top: 10px;
     }
+
+    .blog-preview {
+        text-indent: 2em;
+        text-align: left;
+    }
 }
 
 
@@ -462,3 +637,5 @@ button {
 .bj {
     margin: 5px 0;
 }
+
+// =================================树洞================================= //

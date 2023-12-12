@@ -1,8 +1,17 @@
 <template>
   <div class="content-main">
+    <div class="content-issue">
+      <slot name="toolscontent"></slot>
+    </div>
     <div class="content-item" v-for="item in textBox" :key="item.id">
-      <!-- 标题 -->
-      <div class="content-title">{{ item.title }}</div>
+      <!-- 头像 -->
+      <div class="user">
+        <!-- <comp-imgage></comp-imgage> -->
+        <slot name="toolsbar"></slot>
+        <!-- 标题 -->
+        <div class="content-title">{{ item.title }}</div>
+      </div>
+
       <!-- 发布时间 -->
       <div class="release-time">
         <div class="release">发布于</div>
@@ -24,8 +33,12 @@
   </div>
 </template>
 <script>
+// import CompImgage from "@/components/CompImgage"
 export default {
-  // props: ["textBox"],
+  // 注册
+  components: {
+    // CompImgage,
+  },
   // 子传父
   props: {
     textBox: {
