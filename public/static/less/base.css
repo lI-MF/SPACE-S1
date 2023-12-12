@@ -299,6 +299,28 @@
 .TreeHoles .TreeHoles-item-content .content-main .content-issue .el-textarea__inner {
   resize: none;
 }
+.TreeHoles .TreeHoles-item-content .content-main .content-issue .el-row .el-button {
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+  border-radius: 50%;
+  padding: 0;
+}
+.TreeHoles .TreeHoles-item-content .content-main .content-issue .el-row .el-button span i {
+  font-size: 18px;
+}
+.TreeHoles .TreeHoles-item-content .content-main .content-issue .el-row .el-button--primary {
+  color: #FFF;
+  font-size: 18px;
+  background-color: #dc943b;
+  border-color: #dc943b;
+}
+.TreeHoles .TreeHoles-item-content .content-main .content-issue .el-row .el-button--primary:focus,
+.TreeHoles .TreeHoles-item-content .content-main .content-issue .el-row .el-button--primary:hover {
+  background: hsl(33, 70%, 65%);
+  border-color: hsl(33, 70%, 65%);
+  color: #FFF;
+}
 .TreeHoles .TreeHoles-item-content .content-main .content-item {
   width: 100%;
   display: flex;

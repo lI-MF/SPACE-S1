@@ -5,16 +5,6 @@
       <comp-content :textBox="listText" @listEvent="showMsg">
         <!-- 发布内容 -->
         <template v-slot:toolscontent>
-          <!-- <el-input
-            type="textarea"
-            :rows="4"
-            maxlength="350"
-            placeholder="快来分享一下生边的琐事吧！"
-            v-model="textarea">
-          </el-input>
-          <span style="color: #999" class="remaining"
-            >剩余{{ remnant }}/350</span
-          > -->
           <el-form
             :model="bulletin"
             :rules="rules"
@@ -26,6 +16,7 @@
                   type="textarea"
                   v-model="bulletin.content"
                   :rows="4"
+                  placeholder="快来分享一下生边的琐事吧！"
                   maxlength="350"
                   @input="descInput">
                 </el-input>
@@ -36,7 +27,9 @@
             </el-form-item>
           </el-form>
           <el-row>
-            <el-button type="primary">发布</el-button>
+            <el-button type="primary"
+              ><i class="iconfont icon-fabu"></i
+            ></el-button>
           </el-row>
         </template>
         <!-- 具名插槽 头像 -->
