@@ -1,12 +1,4 @@
-// body,
-// html {
-//     height: 100%;
-//     margin: 0;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-// }
-// =================================登录动画=================================//
+// =================================登录动画================================= //
 @keyframes rotate {
     0% {
         transform: perspective(400px) rotateZ(5deg) rotateX(-60deg) rotateY(0);
@@ -39,7 +31,7 @@
     }
 }
 
-// =================================主页=================================//
+// =================================主页================================= //
 .home {
     width: 100%;
     padding: 10px 0;
@@ -70,13 +62,10 @@
                     margin-bottom: 10px;
 
                     .content-title {
-                        // display: flex;
                         font-size: 20px;
                         font-weight: bold;
                         text-align: left;
                         padding: 10px;
-                        // justify-content: flex-start;
-                        // align-items: center;
                     }
 
                     .release-time {
@@ -91,18 +80,45 @@
                         }
                     }
 
+                    //
                     .content-box {
                         font-size: 14px;
                         text-indent: 2em;
                         text-align: left;
                         display: flex;
                         justify-content: flex-start;
-                        // align-items: center;
-                        padding: 10px 10px 0 10px;
-                        display: -webkit-box;
-                        -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 3;
-                        overflow: hidden;
+                        padding: 10px;
+
+                        .hidetext {
+                            flex: 1;
+                            font-size: 14px;
+                            line-height: 20px;
+                            text-align: justify;
+                        }
+
+                        .showEllipsis {
+                            // 文本溢出超出两行显示省略号
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 3;
+                            line-clamp: 3;
+                            -webkit-box-orient: vertical;
+
+                            .content_block {
+                                padding: 5px;
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                            }
+
+
+                        }
+
+                        .btnWrap {
+                            align-self: flex-end;
+                            cursor: pointer;
+                        }
                     }
 
                     .full-text {
@@ -211,12 +227,6 @@
 
             // 时间线
             .home-news {
-                // width: 100%;
-                // height: 10rem;
-                // position: absolute;
-                // bottom: 0;
-                // left: 0;
-
                 .block {
                     height: 9rem;
 
@@ -363,7 +373,7 @@
     }
 }
 
-// =================================树洞=================================//
+// =================================树洞================================= //
 .TreeHoles {
     width: 100%;
     padding: 10px 0;
@@ -392,6 +402,16 @@
 
                         .el-form-item__content {
                             margin-left: auto;
+
+                            .el-form-item__error {
+                                color: #F56C6C;
+                                font-size: 12px;
+                                line-height: 1;
+                                padding-top: 4px;
+                                position: absolute;
+                                top: 89%;
+                                left: 22px;
+                            }
 
                             .form-conten {
                                 position: relative;
@@ -499,12 +519,33 @@
                     text-align: left;
                     display: flex;
                     justify-content: flex-start;
-                    // align-items: center;
                     padding: 10px 10px 0 10px;
                     display: -webkit-box;
                     -webkit-box-orient: vertical;
                     -webkit-line-clamp: 3;
                     overflow: hidden;
+
+                    // .hidetext {
+                    //         flex: 1;
+                    //         font-size: 14px;
+                    //         line-height: 20px;
+                    //         text-align: justify;
+                    //     }
+
+                    //     .showEllipsis {
+                    //         // 文本溢出超出两行显示省略号
+                    //         overflow: hidden;
+                    //         text-overflow: ellipsis;
+                    //         display: -webkit-box;
+                    //         -webkit-line-clamp: 3;
+                    //         line-clamp: 3;
+                    //         -webkit-box-orient: vertical;
+                    //     }
+
+                    //     .btnWrap {
+                    //         align-self: flex-end;
+                    //         cursor: pointer;
+                    //     }
                 }
 
                 .full-text {
@@ -543,6 +584,11 @@
         }
     }
 }
+
+// =================================归档================================= //
+
+
+// =================================实验室================================= //
 
 // =================================写博客================================= //
 #edit-blog {
@@ -593,31 +639,7 @@
     }
 }
 
-
-
-
-
-
-// input[type="checkbox"] {
-//     width: 20px;
-//     margin-right: 40px;
-//     margin-top: 20px;
-// }
-
-// textarea {
-//     height: 200px;
-// }
-
-// #checkboxes label {
-//     display: inline-block;
-//     margin-top: 0;
-// }
-
-// #checkboxes input {
-//     display: inline-block;
-//     margin-left: 10px;
-// }
-
+// =================================未知================================= //
 button {
     display: block;
     margin: 20px 0;
@@ -644,9 +666,6 @@ button {
         text-align: left;
     }
 }
-
-
-
 
 .bj {
     margin: 5px 0;

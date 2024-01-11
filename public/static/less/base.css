@@ -72,11 +72,31 @@
   text-align: left;
   display: flex;
   justify-content: flex-start;
-  padding: 10px 10px 0 10px;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  padding: 10px;
+}
+.home .home-item-content .home-item-left .content-main .content-item .content-box .hidetext {
+  flex: 1;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: justify;
+}
+.home .home-item-content .home-item-left .content-main .content-item .content-box .showEllipsis {
   overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.home .home-item-content .home-item-left .content-main .content-item .content-box .showEllipsis .content_block {
+  padding: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.home .home-item-content .home-item-left .content-main .content-item .content-box .btnWrap {
+  align-self: flex-end;
+  cursor: pointer;
 }
 .home .home-item-content .home-item-left .content-main .content-item .full-text {
   text-align: left;
@@ -282,6 +302,15 @@
 }
 .TreeHoles .TreeHoles-item-content .content-main .content-issue .el-form .el-form-item .el-form-item__content {
   margin-left: auto;
+}
+.TreeHoles .TreeHoles-item-content .content-main .content-issue .el-form .el-form-item .el-form-item__content .el-form-item__error {
+  color: #F56C6C;
+  font-size: 12px;
+  line-height: 1;
+  padding-top: 4px;
+  position: absolute;
+  top: 89%;
+  left: 22px;
 }
 .TreeHoles .TreeHoles-item-content .content-main .content-issue .el-form .el-form-item .el-form-item__content .form-conten {
   position: relative;

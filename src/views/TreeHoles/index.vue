@@ -127,10 +127,7 @@ export default {
     },
 
     // 全文阅读事件
-    showMsg: function (textBox) {
-      this.$router.push({
-        name: "Details",
-      })
+    showMsg(textBox) {
       console.log(textBox, "data>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
     },
   },

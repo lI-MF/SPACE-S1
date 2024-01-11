@@ -9,7 +9,7 @@ import MyFile from "../views/MyFile/index.vue" //
 import MyEditor from "../views/MyEditor/index.vue" //
 
 import About from "../views/About/About.vue"
-import Details from "../views/Details/Details.vue"
+// import Details from "../views/Details/Details.vue"
 
 import Photography from "../views/Photography/Photography.vue"
 import Login from "../views/Login/index.vue"
@@ -26,6 +26,14 @@ const routes = [
         path: "/home",
         name: "home",
         component: Home,
+        // children: [
+        //   // 详情页
+        //   {
+        //     path: "/Details",
+        //     name: "Details",
+        //     component: Details,
+        //   },
+        // ],
       },
       {
         //树洞
@@ -61,6 +69,11 @@ const routes = [
         name: "About",
         component: About,
       },
+      // {
+      //   path: "/Details",
+      //   name: "Details",
+      //   component: Details,
+      // },
     ],
   },
 
@@ -73,12 +86,6 @@ const routes = [
     path: "/",
     routes: "/Login",
     component: Login,
-  },
-  // 详情页
-  {
-    path: "/Details",
-    name: "Details",
-    component: Details,
   },
 ]
 
