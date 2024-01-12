@@ -24,16 +24,18 @@
           :class="
             item.isShow === false ? 'room_intro showEllipsis' : 'room_intro'
           ">
-          {{ item.content }}
+          <div class="content_text">
+            {{ item.content }}
+          </div>
 
           <!-- 图片 -->
-          <div class="content_block">
+          <!-- <div class="content_block">
             <el-image :src="item.contentSrc">
               <div slot="placeholder" class="image-slot">
                 加载中<span class="dot">...</span>
               </div>
             </el-image>
-          </div>
+          </div> -->
         </div>
       </div>
       <!-- 全文跳转 -->

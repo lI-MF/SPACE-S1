@@ -82,9 +82,6 @@
 
                     //
                     .content-box {
-                        font-size: 14px;
-                        text-indent: 2em;
-                        text-align: left;
                         display: flex;
                         justify-content: flex-start;
                         padding: 10px;
@@ -96,6 +93,30 @@
                             text-align: justify;
                         }
 
+                        .room_intro {
+                            .content_text {
+                                text-align: left;
+                                font-size: 14px;
+                                text-indent: 2em;
+                            }
+
+                            .content_block {
+                                padding: 5px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                .el-image {
+                                    width: 100%;
+
+                                    .el-image__inner {
+                                        width: 100%;
+
+                                    }
+                                }
+                            }
+                        }
+
                         .showEllipsis {
                             // 文本溢出超出两行显示省略号
                             overflow: hidden;
@@ -105,12 +126,7 @@
                             line-clamp: 3;
                             -webkit-box-orient: vertical;
 
-                            .content_block {
-                                padding: 5px;
-                                display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
-                            }
+
 
 
                         }
@@ -514,38 +530,62 @@
                 }
 
                 .content-box {
-                    font-size: 14px;
-                    text-indent: 2em;
-                    text-align: left;
+                    // font-size: 14px;
+                    // text-indent: 2em;
+                    // text-align: left;
                     display: flex;
                     justify-content: flex-start;
-                    padding: 10px 10px 0 10px;
-                    display: -webkit-box;
-                    -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 3;
-                    overflow: hidden;
+                    padding: 10px;
 
-                    // .hidetext {
-                    //         flex: 1;
-                    //         font-size: 14px;
-                    //         line-height: 20px;
-                    //         text-align: justify;
-                    //     }
+                    .hidetext {
+                        flex: 1;
+                        font-size: 14px;
+                        line-height: 20px;
+                        text-align: justify;
+                    }
 
-                    //     .showEllipsis {
-                    //         // 文本溢出超出两行显示省略号
-                    //         overflow: hidden;
-                    //         text-overflow: ellipsis;
-                    //         display: -webkit-box;
-                    //         -webkit-line-clamp: 3;
-                    //         line-clamp: 3;
-                    //         -webkit-box-orient: vertical;
-                    //     }
+                    .room_intro {
+                        .content_text {
+                            text-align: left;
+                            font-size: 14px;
+                            text-indent: 2em;
+                        }
 
-                    //     .btnWrap {
-                    //         align-self: flex-end;
-                    //         cursor: pointer;
-                    //     }
+                        .content_block {
+                            padding: 5px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            .el-image {
+                                width: 100%;
+
+                                .el-image__inner {
+                                    width: 100%;
+
+                                }
+                            }
+                        }
+                    }
+
+                    .showEllipsis {
+                        // 文本溢出超出两行显示省略号
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        line-clamp: 3;
+                        -webkit-box-orient: vertical;
+
+
+
+
+                    }
+
+                    .btnWrap {
+                        align-self: flex-end;
+                        cursor: pointer;
+                    }
                 }
 
                 .full-text {

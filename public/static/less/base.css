@@ -67,9 +67,6 @@
   padding: 0 5px;
 }
 .home .home-item-content .home-item-left .content-main .content-item .content-box {
-  font-size: 14px;
-  text-indent: 2em;
-  text-align: left;
   display: flex;
   justify-content: flex-start;
   padding: 10px;
@@ -80,6 +77,23 @@
   line-height: 20px;
   text-align: justify;
 }
+.home .home-item-content .home-item-left .content-main .content-item .content-box .room_intro .content_text {
+  text-align: left;
+  font-size: 14px;
+  text-indent: 2em;
+}
+.home .home-item-content .home-item-left .content-main .content-item .content-box .room_intro .content_block {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home .home-item-content .home-item-left .content-main .content-item .content-box .room_intro .content_block .el-image {
+  width: 100%;
+}
+.home .home-item-content .home-item-left .content-main .content-item .content-box .room_intro .content_block .el-image .el-image__inner {
+  width: 100%;
+}
 .home .home-item-content .home-item-left .content-main .content-item .content-box .showEllipsis {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -87,12 +101,6 @@
   -webkit-line-clamp: 3;
   line-clamp: 3;
   -webkit-box-orient: vertical;
-}
-.home .home-item-content .home-item-left .content-main .content-item .content-box .showEllipsis .content_block {
-  padding: 5px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
 }
 .home .home-item-content .home-item-left .content-main .content-item .content-box .btnWrap {
   align-self: flex-end;
@@ -391,16 +399,44 @@
   padding: 0 5px;
 }
 .TreeHoles .TreeHoles-item-content .content-main .content-item .content-box {
-  font-size: 14px;
-  text-indent: 2em;
-  text-align: left;
   display: flex;
   justify-content: flex-start;
-  padding: 10px 10px 0 10px;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  padding: 10px;
+}
+.TreeHoles .TreeHoles-item-content .content-main .content-item .content-box .hidetext {
+  flex: 1;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: justify;
+}
+.TreeHoles .TreeHoles-item-content .content-main .content-item .content-box .room_intro .content_text {
+  text-align: left;
+  font-size: 14px;
+  text-indent: 2em;
+}
+.TreeHoles .TreeHoles-item-content .content-main .content-item .content-box .room_intro .content_block {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.TreeHoles .TreeHoles-item-content .content-main .content-item .content-box .room_intro .content_block .el-image {
+  width: 100%;
+}
+.TreeHoles .TreeHoles-item-content .content-main .content-item .content-box .room_intro .content_block .el-image .el-image__inner {
+  width: 100%;
+}
+.TreeHoles .TreeHoles-item-content .content-main .content-item .content-box .showEllipsis {
   overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.TreeHoles .TreeHoles-item-content .content-main .content-item .content-box .btnWrap {
+  align-self: flex-end;
+  cursor: pointer;
 }
 .TreeHoles .TreeHoles-item-content .content-main .content-item .full-text {
   text-align: left;
