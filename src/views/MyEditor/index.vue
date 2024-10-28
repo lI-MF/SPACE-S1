@@ -1,4 +1,5 @@
 <template>
+  <!-- 写博客 -->
   <div id="edit-blog">
     <h1 class="showtit">编辑博客</h1>
     <hr />

@@ -1,4 +1,5 @@
 <template>
+  <!-- 首页 -->
   <div class="home">
     <div class="home-item-content">
       <div class="home-item-left">
