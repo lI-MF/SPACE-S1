@@ -6,6 +6,27 @@
   "description": "个人博客",
   "glyphs": [
     {
+      "icon_id": "5203326",
+      "name": "增加",
+      "font_class": "zengjia",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "11833601",
+      "name": "修改",
+      "font_class": "xiugai",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "12606173",
+      "name": "删除",
+      "font_class": "shanchu",
+      "unicode": "e654",
+      "unicode_decimal": 58964
+    },
+    {
       "icon_id": "978315",
       "name": "发布",
       "font_class": "fabu",

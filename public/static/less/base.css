@@ -208,6 +208,11 @@
   font-size: 12px;
   color: #797979;
 }
+.home .home-item-content .area-functional {
+  position: fixed;
+  top: 38.5rem;
+  left: 64%;
+}
 .oop {
   background-color: #dc943b;
 }
