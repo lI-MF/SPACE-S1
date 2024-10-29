@@ -35,21 +35,22 @@
 .home {
     width: 100%;
     padding: 10px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
 
     .home-item-content {
-        width: 100%;
+        // width: 100%;
         margin: 0 10%;
-        display: flex;
-        justify-content: center;
-        // align-items: center;
+        // display: flex;
+        // justify-content: center;
 
         // 左边
         .home-item-left {
-            width: 75%;
+            width: 68%;
             padding: 0 10px;
+            position: relative;
 
             .content-main {
                 .content-item {
@@ -160,114 +161,133 @@
         }
 
         // 右边
-        .home-item-right {
-            width: 25%;
-            height: 558px;
-            margin: 0 10px;
-            background-color: #ffffff;
-            border-radius: 6px;
-            box-shadow: 3px 5px 5px #656b79;
+        .home-right {
+            position: fixed;
+            top: 42px;
+            // right: 20%;
+            left: 65%;
 
-            // 日历
-            .home-date {
-                height: 340px;
+            .home-item-right {
+                width: 65%;
+                height: 558px;
+                margin: 0 10px;
+                background-color: #ffffff;
+                border-radius: 6px;
+                box-shadow: 3px 5px 5px #656b79;
+                position: static;
 
-                .el-calendar {
-                    border-radius: 6px;
+                // 日历
+                .home-date {
+                    height: 340px;
 
-                    .el-calendar__header {
-                        display: flex;
-                        justify-content: space-between;
-                        flex-direction: column;
-                        padding: 12px 4px;
-                        border-bottom: 1px solid #ebeef5;
+                    .el-calendar {
+                        border-radius: 6px;
 
-                        .el-calendar__title {
-                            font-size: 14px;
-                            color: #000;
-                            align-self: center;
+                        .el-calendar__header {
+                            display: flex;
+                            justify-content: space-between;
+                            flex-direction: column;
+                            padding: 12px 4px;
+                            border-bottom: 1px solid #ebeef5;
+
+                            .el-calendar__title {
+                                font-size: 14px;
+                                color: #000;
+                                align-self: center;
+                            }
+
+                            .el-calendar__button-group {
+                                margin-top: 10px;
+
+                                .el-button-group {
+                                    display: inline-block;
+                                    vertical-align: middle;
+
+                                    .el-button:active {
+                                        color: #ffffff;
+                                        border-color: #f2b263;
+                                        background-color: #f2b263;
+                                        outline: 0;
+                                    }
+
+                                    .el-button:focus {
+                                        color: #ffffff;
+                                        border-color: #f2b263;
+                                        background-color: #f2b263;
+                                    }
+
+                                    .el-button:hover {
+                                        color: #ffffff;
+                                        border-color: #f2b263;
+                                        background-color: #f2b263;
+                                    }
+
+                                }
+                            }
+
                         }
 
-                        .el-calendar__button-group {
-                            margin-top: 10px;
+                        .el-calendar__body {
+                            padding: 0 2px;
 
-                            .el-button-group {
-                                display: inline-block;
-                                vertical-align: middle;
-
-                                .el-button:active {
-                                    color: #ffffff;
-                                    border-color: #f2b263;
-                                    background-color: #f2b263;
-                                    outline: 0;
+                            .el-calendar-table {
+                                td.is-selected {
+                                    background-color: #ffffff;
                                 }
 
-                                .el-button:focus {
-                                    color: #ffffff;
-                                    border-color: #f2b263;
-                                    background-color: #f2b263;
+                                td.is-today {
+                                    color: #dc943b;
                                 }
 
-                                .el-button:hover {
-                                    color: #ffffff;
-                                    border-color: #f2b263;
-                                    background-color: #f2b263;
+                                .el-calendar-day {
+                                    box-sizing: border-box;
+                                    padding: 8px;
+                                    height: 36px;
                                 }
-
-                            }
-                        }
-
-                    }
-
-                    .el-calendar__body {
-                        padding: 0 2px;
-
-                        .el-calendar-table {
-                            td.is-selected {
-                                background-color: #ffffff;
-                            }
-
-                            td.is-today {
-                                color: #dc943b;
-                            }
-
-                            .el-calendar-day {
-                                box-sizing: border-box;
-                                padding: 8px;
-                                height: 36px;
                             }
                         }
                     }
                 }
-            }
 
-            // 时间线
-            .home-news {
-                .block {
-                    height: 9rem;
+                // 时间线
+                .home-news {
+                    .block {
+                        height: 9rem;
 
-                    .el-timeline {
-                        height: 10rem;
-                        // margin: 8px;
-                        list-style: none;
-                        overflow-y: auto;
-                        padding: 0 10px;
+                        .el-timeline {
+                            height: 10rem;
+                            // margin: 8px;
+                            list-style: none;
+                            overflow-y: auto;
+                            padding: 0 10px;
 
-                        .el-timeline-item {
-                            position: relative;
-                            padding-bottom: 8px;
-
-                            .el-timeline-item__wrapper {
+                            .el-timeline-item {
                                 position: relative;
-                                padding-left: 20px;
-                                top: -3px;
+                                padding-bottom: 8px;
+
+                                .el-timeline-item__wrapper {
+                                    position: relative;
+                                    padding-left: 20px;
+                                    top: -3px;
+                                    text-align: left;
+
+                                    .el-timeline-item__content {
+                                        .content-date {
+                                            font-size: 12px;
+                                            color: #797979
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
                 }
             }
         }
+
     }
+
+
 
 }
 

@@ -8,7 +8,9 @@
       <div class="user">
         <slot name="toolsbar"></slot>
         <!-- 标题 -->
-        <div class="content-title">{{ item.title }}</div>
+        <div class="content-title" @click="contentTitle(item)">
+          {{ item.title }}
+        </div>
       </div>
 
       <!-- 发布时间 -->
@@ -69,6 +71,9 @@ export default {
     textBox: {
       type: [Object, Array],
       default: () => {},
+    },
+    contentTitle: {
+      type: Function,
     },
   },
 
