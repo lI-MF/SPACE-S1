@@ -6,19 +6,24 @@
         <!-- Top 栏 -->
 
         <div class="item-top">
-          <!--  -->
+          <!-- 搜索框 -->
           <el-input
             placeholder="请输入内容"
             v-model="searchInput"
-            class="input-with-select"
-            icon="el-icon-search">
-            <!-- <el-select v-model="select" slot="prepend" placeholder="请选择">
-              <el-option label="餐厅名" value="1"></el-option>
-              <el-option label="订单号" value="2"></el-option>
-              <el-option label="用户电话" value="3"></el-option>
-            </el-select> -->
-            <!-- <el-button slot="append" icon="el-icon-search"></el-button> -->
+            class="input-with-select "
+            >
           </el-input>
+          <comp-function>
+          <template v-slot:write-btn>
+            <el-button
+              type="primary"
+              class="function_btn"
+              
+              @click="addClickEvent"
+              ><i class="iconfont icon-zengjia"></i
+            ></el-button>
+          </template>
+        </comp-function>
         </div>
       </div>
       <div class="home-item-left">
@@ -60,7 +65,7 @@
       <!-- 右下 功能区 -->
       <div class="area-functional">
         <!--  -->
-        <comp-function>
+        <!-- <comp-function>
           <template v-slot:write-btn>
             <el-button
               type="primary"
@@ -70,7 +75,7 @@
               ><i class="iconfont icon-zengjia"></i
             ></el-button>
           </template>
-        </comp-function>
+        </comp-function> -->
       </div>
     </div>
 

@@ -14,8 +14,8 @@
 .comp_function {
   .comp_function-items {
     width: 100%;
-    height: 46px;
-    margin: 0 10px;
+    // height: 30px;
+    // margin: 0 10px;
     // background-color: #ffffff;
     border-radius: 6px;
     // box-shadow: 3px 5px 5px #656b79;
