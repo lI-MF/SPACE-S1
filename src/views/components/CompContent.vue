@@ -29,15 +29,6 @@
           <div class="content_text">
             {{ item.content }}
           </div>
-
-          <!-- 图片 -->
-          <!-- <div class="content_block">
-            <el-image :src="item.contentSrc">
-              <div slot="placeholder" class="image-slot">
-                加载中<span class="dot">...</span>
-              </div>
-            </el-image>
-          </div> -->
         </div>
       </div>
       <!-- 全文跳转 -->
@@ -56,15 +47,36 @@
           </a>
         </el-link>
         <p>{{ item.message }}</p>
+        <!-- 扩展功能 修改、删除 -->
+        <div class="full_extension">
+          <el-tooltip placement="left">
+            <div slot="content">
+              <div>
+                <i
+                  class="iconfont icon-xiugai"
+                  @click="editClickEvent(item)"></i>
+                <i
+                  class="iconfont icon-shanchu"
+                  @click="deleteClickEvent(index)"></i>
+              </div>
+            </div>
+            <span>
+              <i class="iconfont icon-diandiandian"></i>
+            </span>
+          </el-tooltip>
+        </div>
       </div>
+      <div></div>
     </div>
   </div>
 </template>
 <script>
+import CompFunction from "../components/CompFunction.vue"
 export default {
   // 注册
   components: {
     // CompImgage,
+    // CompFunction,
   },
   // 子传父
   props: {
@@ -73,6 +85,12 @@ export default {
       default: () => {},
     },
     contentTitle: {
+      type: Function,
+    },
+    editClickEvent: {
+      type: Function,
+    },
+    deleteClickEvent: {
       type: Function,
     },
   },
@@ -103,4 +121,33 @@ export default {
   },
 }
 </script>
-<style lang="less"></style>
+<style lang="less">
+.el-tooltip__popper.is-dark {
+  width: 80px;
+
+  background: transparent !important;
+  // display: flex;
+  // justify-content: center;
+  i {
+    font-size: 20px;
+    padding: 10px;
+    color: #dc943b;
+    &:hover {
+      color: hsl(33, 78%, 33%);
+      cursor: pointer;
+    }
+  }
+}
+.el-tooltip__popper[x-placement^="left"] .popper__arrow::after {
+  right: 1px;
+  bottom: -5px;
+  margin-left: -5px;
+  border-right-width: 0;
+  border-left-color: #ffffff !important;
+}
+.el-tooltip__popper[x-placement^="left"] .popper__arrow {
+  right: -6px;
+  border-right-width: 0;
+  border-left-color: #ffffff !important;
+}
+</style>

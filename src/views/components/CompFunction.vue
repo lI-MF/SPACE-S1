@@ -7,6 +7,9 @@
     </div>
   </div>
 </template>
+<script>
+//
+</script>
 <style lang="less">
 .comp_function {
   .comp_function-items {

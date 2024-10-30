@@ -169,7 +169,6 @@ export default {
       this.dialogTitle = valueText.title
       this.textVlaue = valueText.text
       this.textImg = valueText.imgUrl
-      console.log(valueText, "value=========================>")
     },
   },
 }
@@ -181,24 +180,7 @@ export default {
 <style lang="less">
 // @import '';
 .Photogs {
-  // position: relative;
-  // // margin-top: 20px;
-  // // display: flex;
-  // // justify-content: center;
-  // .home-code-item {
-  //   position: absolute;
-  //   top: 50%;
-  //   left: 50%;
-  //   transform: translate(-50%, 50%);
-  //   width: 60%;
-  //   height: 300px;
-  //   background-color: bisque;
-  // }
   .dialogLand {
-    // .dialog-text {
-    //   // overflow-y: scroll;
-    //   padding: 20px;
-    // }
     .el-dialog {
       height: 70%;
       overflow: hidden;
