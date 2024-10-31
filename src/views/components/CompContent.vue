@@ -54,10 +54,10 @@
               <div>
                 <i
                   class="iconfont icon-xiugai"
-                  @click="editClickEvent(item)"></i>
+                  @click="editClickEvent(index)"></i>
                 <i
                   class="iconfont icon-shanchu"
-                  @click="deleteClickEvent(index)"></i>
+                  @click="deleteClickEvent(index, true)"></i>
               </div>
             </div>
             <span>

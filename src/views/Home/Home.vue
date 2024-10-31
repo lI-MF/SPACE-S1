@@ -10,20 +10,20 @@
           <el-input
             placeholder="请输入内容"
             v-model="searchInput"
-            class="input-with-select "
-            >
+            class="input-with-select"
+            prefix-icon="el-icon-search">
           </el-input>
+          <!--新增按钮 -->
           <comp-function>
-          <template v-slot:write-btn>
-            <el-button
-              type="primary"
-              class="function_btn"
-              
-              @click="addClickEvent"
-              ><i class="iconfont icon-zengjia"></i
-            ></el-button>
-          </template>
-        </comp-function>
+            <template v-slot:write-btn>
+              <el-button
+                type="warning"
+                class="function_btn"
+                @click=";(dialogVisible = true), (dialogInput = -1)"
+                ><i class="iconfont icon-zengjia"></i
+              ></el-button>
+            </template>
+          </comp-function>
         </div>
       </div>
       <div class="home-item-left">
@@ -65,17 +65,6 @@
       <!-- 右下 功能区 -->
       <div class="area-functional">
         <!--  -->
-        <!-- <comp-function>
-          <template v-slot:write-btn>
-            <el-button
-              type="primary"
-              class="function_btn"
-              circle
-              @click="addClickEvent"
-              ><i class="iconfont icon-zengjia"></i
-            ></el-button>
-          </template>
-        </comp-function> -->
       </div>
     </div>
 
@@ -92,6 +81,39 @@
           {{ textVlaue }}
         </div>
       </div>
+    </el-dialog>
+    <!-- 新增、修改弹窗 -->
+    <el-dialog title="添加" :visible.sync="dialogVisible" width="60%">
+      <el-form label-width="90px">
+        <el-form-item label="标题">
+          <el-input v-model="input.title"></el-input>
+        </el-form-item>
+        <el-form-item label="日期">
+          <div class="block">
+            <el-date-picker
+              v-model="input.date"
+              type="date"
+              format="yyyy-MM-dd"
+              value-format="yyyy-MM-dd"
+              @change="getCreateTime"
+              placeholder="选择日期">
+            </el-date-picker>
+          </div>
+        </el-form-item>
+        <el-form-item label="内容">
+          <el-input
+            type="textarea"
+            resize="none"
+            :rows="10"
+            v-model="input.content"></el-input>
+        </el-form-item>
+      </el-form>
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="dialogVisible = false">取 消</el-button>
+        <el-button type="primary" @click="branchAdd(dialogInput)"
+          >确 定</el-button
+        >
+      </span>
     </el-dialog>
   </div>
 </template>
@@ -111,6 +133,18 @@ export default {
 
   data() {
     return {
+      // =================================================
+      // 新增弹窗
+      input: {
+        id: "",
+        title: "",
+        date: "",
+        content: "",
+      },
+      dialogInput: -1,
+      dialogVisible: false,
+      // =================================================
+
       // 搜索框
       searchInput: "",
       // 是否隐藏
@@ -208,21 +242,70 @@ export default {
       //
       console.log(value, "value===============================>")
     },
+    // 日期选择
+    getCreateTime(val) {
+      this.input.date = val
+    },
     /**
-     * 新增点击事件
+     * 新增提交
      */
-    addClickEvent(addValue) {
-      //
-      this.open = true
-      // this.dialogTitle = addValue.title
-      console.log(addValue, "addValue===========>")
+
+    branchAdd(dialogInput) {
+      this.dialogVisible = false
+      // console.log("asdasdasdasdasdasd")
+      // this.$api.branch.add(
+      //   (data) => {
+      //     //这里为点击按钮调用的接口
+      //     window.location.reload() //调用成功刷新页面更新数据
+      //   },
+
+      //   {
+      //     titleCon: this.input.title, //传递绑定的参数，注意this指向
+      //     dateCon: this.input.date,
+      //     contentCon: this.input.content,
+      //   }
+      // )
+
+      if (dialogInput === -1) {
+        console.log(dialogInput, "editInput========>")
+        this.listText.push({
+          index: this.listText.length + 1,
+          title: this.input.title,
+          date: this.input.date,
+          isShow: false,
+          content: this.input.content,
+        })
+      } else {
+        //
+        this.listText[dialogInput].id = this.input.id
+        this.listText[dialogInput].title = this.input.title
+        this.listText[dialogInput].date = this.input.date
+        this.listText[dialogInput].content = this.input.content
+      }
     },
     /**
      * 修改点击事件
      */
-    editEvent(editValue) {
+    editEvent(editIndex) {
       //
-      console.log(editValue, "editValue==============================>")
+      this.dialogVisible = true
+      this.dialogInput = editIndex
+
+      const textCon = this.listText
+      // textCon.splice(
+      //   index: this.listText.length + 1,
+      //   title: this.input.title,
+      //   date: this.input.date,
+      //   isShow: false,
+      //   content: this.input.content,
+      // )
+
+      ;(this.input.id = this.listText[editIndex].id),
+        (this.input.title = this.listText[editIndex].title),
+        (this.input.date = this.listText[editIndex].date),
+        (this.input.content = this.listText[editIndex].content),
+        console.log(editIndex, "editIndex==============================>")
+      console.log(textCon, "textCon==============================>")
     },
     /**
      * 删除点击事件
