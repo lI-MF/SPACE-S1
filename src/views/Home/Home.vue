@@ -16,11 +16,8 @@
           <!--新增按钮 -->
           <comp-function>
             <template v-slot:write-btn>
-              <el-button
-                type="warning"
-                class="function_btn"
-                @click=";(dialogVisible = true), (dialogInput = -1)"
-                ><i class="iconfont icon-zengjia"></i
+              <el-button type="warning" class="function_btn" @click="addClick"
+                ><i class="iconfont icon-xiugai"></i
               ></el-button>
             </template>
           </comp-function>
@@ -83,7 +80,10 @@
       </div>
     </el-dialog>
     <!-- 新增、修改弹窗 -->
-    <el-dialog title="添加" :visible.sync="dialogVisible" width="60%">
+    <el-dialog
+      :visible.sync="dialogVisible"
+      width="60%"
+      @close="closeDialog('addForm')">
       <el-form label-width="90px">
         <el-form-item label="标题">
           <el-input v-model="input.title"></el-input>
@@ -96,6 +96,7 @@
               format="yyyy-MM-dd"
               value-format="yyyy-MM-dd"
               @change="getCreateTime"
+              disabled
               placeholder="选择日期">
             </el-date-picker>
           </div>
@@ -110,7 +111,7 @@
       </el-form>
       <span slot="footer" class="dialog-footer">
         <el-button @click="dialogVisible = false">取 消</el-button>
-        <el-button type="primary" @click="branchAdd(dialogInput)"
+        <el-button type="warning" @click="branchSubmit(dialogInput)"
           >确 定</el-button
         >
       </span>
@@ -138,13 +139,15 @@ export default {
       input: {
         id: "",
         title: "",
-        date: "",
+        date: new Date(),
         content: "",
       },
       dialogInput: -1,
       dialogVisible: false,
-      // =================================================
 
+      // =================================================
+      // 当前日期
+      //  input.date: ,
       // 搜索框
       searchInput: "",
       // 是否隐藏
@@ -231,6 +234,7 @@ export default {
       value: new Date(),
     }
   },
+
   mounted() {},
   methods: {
     // 全文阅读事件
@@ -247,10 +251,24 @@ export default {
       this.input.date = val
     },
     /**
-     * 新增提交
+     * 新增
      */
-
-    branchAdd(dialogInput) {
+    addClick(dialogInput) {
+      //
+      this.dialogInput = -1
+      console.log((dialogInput = -1), "asdasd")
+      this.dialogVisible = true
+      this.input.date = new Date()
+    },
+    //弹窗关闭回调行数
+    closeDialog() {
+      this.input.id = ""
+      this.input.title = ""
+      this.input.date = ""
+      this.input.content = ""
+    },
+    // 提交
+    branchSubmit(dialogInput) {
       this.dialogVisible = false
       // console.log("asdasdasdasdasdasd")
       // this.$api.branch.add(
@@ -282,16 +300,22 @@ export default {
         this.listText[dialogInput].date = this.input.date
         this.listText[dialogInput].content = this.input.content
       }
+
+      this.input.id = ""
+      this.input.title = ""
+      this.input.date = ""
+      this.input.content = ""
     },
     /**
      * 修改点击事件
      */
     editEvent(editIndex) {
       //
+      // this.disabled = true
       this.dialogVisible = true
       this.dialogInput = editIndex
 
-      const textCon = this.listText
+      // const textCon = this.listText
       // textCon.splice(
       //   index: this.listText.length + 1,
       //   title: this.input.title,
@@ -300,12 +324,10 @@ export default {
       //   content: this.input.content,
       // )
 
-      ;(this.input.id = this.listText[editIndex].id),
-        (this.input.title = this.listText[editIndex].title),
-        (this.input.date = this.listText[editIndex].date),
-        (this.input.content = this.listText[editIndex].content),
-        console.log(editIndex, "editIndex==============================>")
-      console.log(textCon, "textCon==============================>")
+      this.input.id = this.listText[editIndex].id
+      this.input.title = this.listText[editIndex].title
+      this.input.date = this.listText[editIndex].date
+      this.input.content = this.listText[editIndex].content
     },
     /**
      * 删除点击事件
