@@ -83,39 +83,39 @@ export default {
     }
   },
   methods: {
-    fetchData() {
-      this.$axios
-        .get(
-          "https://myblog-9d6a6-default-rtdb.asia-southeast1.firebasedatabase.app/posts/" +
-            this.id +
-            ".json"
-        )
-        .then((res) => {
-          this.blog = res.data
-          this.preview = this.blog.content
-        })
-    },
-    put() {
-      this.blog.time = this.getNowFormatDate()
-      this.$axios
-        .put(
-          "https://myblog-9d6a6-default-rtdb.asia-southeast1.firebasedatabase.app/posts/" +
-            this.id +
-            ".json",
-          this.blog
-        )
-        .then((res) => {
-          console.log(res)
-          this.submited = true
-        })
-    },
+    // fetchData() {
+    //   this.$axios
+    //     .get(
+    //       "https://myblog-9d6a6-default-rtdb.asia-southeast1.firebasedatabase.app/posts/" +
+    //         this.id +
+    //         ".json"
+    //     )
+    //     .then((res) => {
+    //       this.blog = res.data
+    //       this.preview = this.blog.content
+    //     })
+    // },
+    // put() {
+    //   this.blog.time = this.getNowFormatDate()
+    //   this.$axios
+    //     .put(
+    //       "https://myblog-9d6a6-default-rtdb.asia-southeast1.firebasedatabase.app/posts/" +
+    //         this.id +
+    //         ".json",
+    //       this.blog
+    //     )
+    //     .then((res) => {
+    //       console.log(res)
+    //       this.submited = true
+    //     })
+    // },
     updateDoc(value, render) {
       this.blog.content = render
     },
   },
-  created() {
-    this.fetchData()
-  },
+  // created() {
+  //   this.fetchData()
+  // },
 }
 </script>
 

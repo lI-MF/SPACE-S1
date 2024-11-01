@@ -102,11 +102,15 @@
           </div>
         </el-form-item>
         <el-form-item label="内容">
-          <el-input
+          <!-- <el-input
             type="textarea"
             resize="none"
             :rows="10"
-            v-model="input.content"></el-input>
+            v-model="input.content"></el-input> -->
+          <mavon-editor
+            v-model="input.content"
+            :ishljs="true"
+            @change="updateDoc"></mavon-editor>
         </el-form-item>
       </el-form>
       <span slot="footer" class="dialog-footer">
@@ -271,18 +275,6 @@ export default {
     branchSubmit(dialogInput) {
       this.dialogVisible = false
       // console.log("asdasdasdasdasdasd")
-      // this.$api.branch.add(
-      //   (data) => {
-      //     //这里为点击按钮调用的接口
-      //     window.location.reload() //调用成功刷新页面更新数据
-      //   },
-
-      //   {
-      //     titleCon: this.input.title, //传递绑定的参数，注意this指向
-      //     dateCon: this.input.date,
-      //     contentCon: this.input.content,
-      //   }
-      // )
 
       if (dialogInput === -1) {
         console.log(dialogInput, "editInput========>")
@@ -315,15 +307,6 @@ export default {
       this.dialogVisible = true
       this.dialogInput = editIndex
 
-      // const textCon = this.listText
-      // textCon.splice(
-      //   index: this.listText.length + 1,
-      //   title: this.input.title,
-      //   date: this.input.date,
-      //   isShow: false,
-      //   content: this.input.content,
-      // )
-
       this.input.id = this.listText[editIndex].id
       this.input.title = this.listText[editIndex].title
       this.input.date = this.listText[editIndex].date
@@ -336,6 +319,11 @@ export default {
       //
       console.log(delIndex, "delIndex==============================>")
       this.listText.splice(delIndex, 1)
+    },
+    // 富文本
+    updateDoc(value, render) {
+      // render 为 markdown 解析后的结果
+      this.input.content = render
     },
   },
 }
