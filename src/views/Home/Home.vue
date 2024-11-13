@@ -247,8 +247,7 @@ export default {
     },
     //标题点击跳转事件
     titleClickEvent(value) {
-      //
-      console.log(value, "value===============================>")
+      //console.log(value, "value===============================>")
     },
     // 日期选择
     getCreateTime(val) {
